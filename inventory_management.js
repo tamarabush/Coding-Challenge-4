@@ -76,3 +76,25 @@ function checkLowStock (inventory) {
 
 checkLowStock(inventory);
 //output = Body Lotion is low on stock, Shampoo is low on stock
+
+
+
+//TASK 5 - Create calculateInventoryValue function
+
+function calculateInventoryValue(inventory) {
+
+    return inventory.reduce((sum, inventory) => {
+        //applyimg reduce method to array sum = callback, inventory =array
+
+        const sumCalculation = inventory.price * inventory.quantity;
+        //defining the total of the price and quantity by using multiplication 
+
+        return sum + sumCalculation; }, 0);
+        //accumulating the total value by using the callback(sum)
+};
+
+let total = calculateInventoryValue(inventory);
+//defining total by applying the function to the inventory
+
+console.log(`The total inventory value is $${total}`);
+//output = The total inventory value is $6245
