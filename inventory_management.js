@@ -98,3 +98,27 @@ let total = calculateInventoryValue(inventory);
 
 console.log(`The total inventory value is $${total}`);
 //output = The total inventory value is $6245
+
+
+
+//TASK 6 - Create a Function to Process a Sale
+
+function processSale(inventory, productName, unitsSold){
+    
+    const findProduct = inventory.find(item => item.name === productName);
+    //using the find to locate the product name in the inventory array
+
+    if (findProduct) {
+        updateStock(findProduct, unitsSold);
+        //if able to find product in the inventory than it applies the updateStock function
+
+    }  else {
+        console.log(`ERROR: ${productName} is not in the inventory.`);
+        //if unable to find product in the inventory than consoles a Error message
+    }
+};
+processSale(inventory, 'Perfume', 0); 
+//this is in the inventory so it won't consol.log anything
+
+processSale(inventory, 'Laptop' , 2 )
+//output = ERROR: Laptop is not in the inventory
