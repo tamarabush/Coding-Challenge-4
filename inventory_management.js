@@ -118,7 +118,7 @@ function processSale(inventory, productName, unitsSold){
     }
 };
 processSale(inventory, 'Perfume', 0); 
-//this is in the inventory so it won't consol.log anything
+//this is in the inventory so it won't console.log anything, it will only update the stock
 
 processSale(inventory, 'Laptop' , 2 )
 //output = ERROR: Laptop is not in the inventory
